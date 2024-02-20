@@ -1,14 +1,11 @@
 import React from 'react';
-import Image from '../components/Image';
-import Title from '../components/Title';
-import Author from '../components/Author';
 
-const Book = () => {
+const Book = (props) => {
   return (
-    <article>
-      <Image />
-      <Title />
-      <Author />
+    <article className='book'>
+      <img src='./images/81G2riKjx4L._SY342_.jpg' alt='Supercommunicators' />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
