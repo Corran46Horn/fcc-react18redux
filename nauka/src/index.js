@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import Book from './components/Book';
 
-import Greeting from './components/Greeting/Greeting';
+function BookList() {
+  return (
+    <section>
+      <Book />
+    </section>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <>
-    <ul>
-      <li>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-        <Greeting></Greeting>
-      </li>
-    </ul>
+    <BookList />
   </>
 );
