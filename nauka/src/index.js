@@ -50,7 +50,7 @@ const EventExamples = () => {
           style={{ margin: '1rem 0' }}
         />
       </form>
-      <Button />
+      <Button></Button>
     </section>
   );
 };
