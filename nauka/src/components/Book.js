@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Book = (props) => {
-  const { img, title, author, children } = props;
+  const { img, title, author, children, id } = props;
   console.log(props);
   return (
-    <article className='book'>
+    <article className='book' key={id}>
       <img src={img} alt='Supercommunicators' />
       <h2>{title}</h2>
       <h4>{author}</h4>
