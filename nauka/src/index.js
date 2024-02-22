@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Book from './components/Book';
 import Styles from './index.css';
-import Button from './components/Button';
 
 const books = [
   {
@@ -27,39 +26,20 @@ const books = [
     author: 'James Clear',
     title: 'Atomic Habits',
     img: 'https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg',
-    id: 3,
+    id: 4,
   },
 ];
 
-const booksList = books.map((book) => {
-  return <Book {...book} key={book.id} />;
-});
-
-const EventExamples = () => {
-  const handleFormInput = () => {
-    console.log('form is alive');
+function BookList() {
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
   };
   return (
-    <section>
-      <form action=''>
-        <h2>typical form</h2>
-        <input
-          type='text'
-          name='example'
-          onChange={handleFormInput}
-          style={{ margin: '1rem 0' }}
-        />
-      </form>
-      <Button></Button>
-    </section>
-  );
-};
-
-function BookList() {
-  return (
     <section className='booklist'>
-      <EventExamples />
-      {booksList}
+      {books.map((book) => {
+        return <Book {...book} key={book.id} getBook={getBook} />;
+      })}
     </section>
   );
 }
