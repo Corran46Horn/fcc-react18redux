@@ -1,18 +1,14 @@
 import React from 'react';
 
 const Book = (props) => {
-  const { img, title, author, children, id, getBook } = props;
+  const { img, title, author, id, number } = props;
   //console.log(props);
-  const getSingleBook = () => {
-    getBook(id);
-  };
   return (
     <article className='book' key={id}>
-      <img src={img} alt='Supercommunicators' />
+      <span className='number'>#{number + 1}</span>
+      <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={getSingleBook}>clickme</button>
       <h4>{author}</h4>
-      {children}
     </article>
   );
 };
