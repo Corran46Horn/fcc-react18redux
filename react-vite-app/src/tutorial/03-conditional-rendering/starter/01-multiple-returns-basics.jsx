@@ -14,6 +14,6 @@ const MultipleReturnsBasics = () => {
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
-  return <h2>Załadowane</h2>;
+  return <h2>Uploaded</h2>;
 };
 export default MultipleReturnsBasics;
