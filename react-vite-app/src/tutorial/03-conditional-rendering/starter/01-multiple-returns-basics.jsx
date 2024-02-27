@@ -1,6 +1,19 @@
 import { useEffect, useState } from 'react';
 
 const MultipleReturnsBasics = () => {
-  return <h2>Multiple Returns Basics</h2>;
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      // example fetching data
+      console.log('done fetching date');
+      setIsLoading(false);
+    }, 2000);
+  });
+
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+  return <h2>Załadowane</h2>;
 };
 export default MultipleReturnsBasics;

@@ -17,6 +17,7 @@ const FetchData = () => {
     };
     fetchData();
   }, []);
+  w;
   return (
     <ul className='users'>
       {users.map((user) => {
