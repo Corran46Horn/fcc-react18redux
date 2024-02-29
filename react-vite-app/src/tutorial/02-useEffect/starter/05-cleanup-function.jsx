@@ -17,6 +17,13 @@ const CleanupFunction = () => {
 const ToggleMe = () => {
   useEffect(() => {
     console.log('hmm, this is interesting');
+    //cleanup function
+    const intId = setInterval(() => {
+      console.log('hello');
+    }, 1000);
+    return () => {
+      clearInterval(intId);
+    };
   }, []);
   return <h2 className='btn'>Ania ania ania</h2>;
 };
