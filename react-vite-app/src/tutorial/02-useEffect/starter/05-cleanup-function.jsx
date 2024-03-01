@@ -17,8 +17,8 @@ const CleanupFunction = () => {
 const ToggleMe = () => {
   useEffect(() => {
     console.log('hmm, this is interesting');
-    //cleanup function
     const intId = setInterval(() => {
+      //cleanup function
       console.log('hello');
     }, 1000);
     return () => {
